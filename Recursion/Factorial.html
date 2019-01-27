@@ -1,0 +1,25 @@
+<script>
+    // factorial using iterative
+    function findFactorialIterative(value) {
+        let finalAnswer = value;
+
+        for (let i = value - 1; i > 1; i--) {
+            finalAnswer = finalAnswer * i;
+        }
+
+        return finalAnswer;
+    }
+
+    console.log(findFactorialIterative(5));
+
+    // factorial using recursive
+    function findFactorialRecursive(value) {
+        if (value <= 2) {
+            return 2;
+        }
+
+        return value * findFactorialRecursive(value - 1);
+    }
+
+    console.log(findFactorialRecursive(5));
+</script>

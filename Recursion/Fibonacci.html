@@ -1,0 +1,25 @@
+<script>
+    // fibonacci using iterative
+    function fibonacciIterative(n) {
+        // 0 1 1 2 3 5 8 13 21 34 55...
+        let numbersInArray = [0, 1];
+        for (let i = 2; i <= n; i++) {
+            numbersInArray.push(numbersInArray[i - 1] + numbersInArray[i - 2]);
+        }
+
+        return numbersInArray[n];
+    }
+
+    console.log(fibonacciIterative(10));
+
+    // fibonacci using recursive
+    function fibonacciRecursive(n) {
+        if (n < 2) {
+            return n;
+        }
+
+        return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
+    }
+
+    console.log(fibonacciRecursive(10));
+</script>
