@@ -1,3 +1,18 @@
 <script>
+    // recursion info
+    // recursion needs a way to get out from the function
+    // Identify the base case
+    // Identify the recursive case
+    // Get closer and closer and return when needed(usually you ahve 2 returns)
+    let counter = 0;
+    function inception() {
+        if (counter > 3) {
+            return "done!";
+        }
+        counter++;
 
+        return inception();
+    }
+
+    console.log(inception());
 </script>
