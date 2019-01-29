@@ -1,0 +1,20 @@
+<script>
+    // create a bubble sort fucntion
+    function bubbleSort(arr) {
+        let array = arr;
+        let loopedTime = 0;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 1; j < array.length - loopedTime; j++) {
+                if (array[j - 1] > array[j]) {
+                    let temp = array[j];
+                    array[j] = array[j - 1];
+                    array[j - 1] = temp;
+                }
+            }
+            loopedTime++;
+        }
+        return array;
+    }
+
+    console.log(bubbleSort([4, 23, 5, 3, 12, 9, 14, 2]));
+</script>

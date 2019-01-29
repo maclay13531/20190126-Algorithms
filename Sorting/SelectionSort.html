@@ -1,0 +1,26 @@
+<script>
+    // create selection function
+    function selectionSort(arr) {
+        let length = arr.length;
+        for (let i = 0; i < length; i++) {
+            let smallestNumber = undefined;
+            let indexNumber = 0;
+            let temp = arr[i];
+            for (let j = 0 + i; j < arr.length; j++) {
+                if (smallestNumber === undefined) {
+                    smallestNumber = arr[j];
+                    indexNumber = j;
+                } else if (smallestNumber > arr[j]) {
+                    smallestNumber = arr[j];
+                    indexNumber = j;
+                }
+            }
+            arr[i] = smallestNumber;
+            arr[indexNumber] = temp;
+        }
+        return arr;
+    }
+
+    console.log(selectionSort([3, 56, 31, 4, 14, 35, 25, 20]));
+
+</script>
